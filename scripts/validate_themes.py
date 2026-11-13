@@ -310,9 +310,15 @@ def _validate_compatibility(path: Path, name: str, values: dict) -> list[str]:
             ):
                 if section.get(key) != "none":
                     errors.append(f"{path.name}: {name} Lite {key} must be none")
-            for key in ("app-header-background-color", "sidebar-background-color"):
-                if section[key] != "transparent":
-                    errors.append(f"{path.name}: {name} Lite {key} must be transparent")
+            if section["sidebar-background-color"] != "transparent":
+                errors.append(f"{path.name}: {name} Lite sidebar-background-color must be transparent")
+            # Lite has no header blur, so the top bar needs a near-opaque fill
+            # or scrolled content shows straight through it.
+            header = re.fullmatch(
+                r"rgba\(\s*\d+,\s*\d+,\s*\d+,\s*([\d.]+)\)", section["app-header-background-color"]
+            )
+            if not header or float(header.group(1)) < 0.85:
+                errors.append(f"{path.name}: {name} Lite app-header-background-color must be rgba with alpha >= 0.85")
             if section["ha-dialog-surface-background"] != section["primary-background-color"]:
                 errors.append(f"{path.name}: {name} Lite dialog surface must be opaque")
             if section.get("frosted-glass-popup-backdrop-filter") != "none":

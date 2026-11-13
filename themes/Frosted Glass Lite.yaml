@@ -11,7 +11,7 @@ Casinha Frosted Lite:
       # HEADER (Top Bar)
       # =========================
       app-header-backdrop-filter: 'none'
-      app-header-background-color: 'transparent'
+      app-header-background-color: 'rgba(254, 244, 242, 0.92)'                                 # Lite: no blur, so a near-opaque fill keeps scrolled content from showing through
       app-header-text-color: 'rgba(29, 29, 31, 0.95)'
       app-header-edit-background-color: 'var(--app-header-background-color)'
       app-header-edit-text-color: 'rgba(29, 29, 31, 0.98)'
@@ -661,7 +661,7 @@ Casinha Frosted Lite:
       # HEADER (Top Bar)
       # =========================
       app-header-backdrop-filter: 'none'
-      app-header-background-color: 'transparent'
+      app-header-background-color: 'rgba(2, 6, 11, 0.92)'                                       # Lite: no blur, so a near-opaque fill keeps scrolled content from showing through
       app-header-text-color: 'rgba(245, 245, 247, 0.95)'
       app-header-edit-background-color: 'var(--app-header-background-color)'
       app-header-edit-text-color: 'rgba(245, 245, 247, 0.98)'
