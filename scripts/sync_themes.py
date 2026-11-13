@@ -39,8 +39,20 @@ def _mode_body(source: str, mode: str) -> str:
     return "\n".join(lines)
 
 
+# Casinha Frosted keeps the upstream filenames so merges from upstream stay
+# clean; only the theme names (the YAML keys Home Assistant shows) differ.
+THEME_NAMES = {
+    "Frosted Glass.yaml": "Casinha Frosted",
+    "Frosted Glass Lite.yaml": "Casinha Frosted Lite",
+    "Frosted Glass Light.yaml": "Casinha Frosted Light",
+    "Frosted Glass Dark.yaml": "Casinha Frosted Dark",
+    "Frosted Glass Light Lite.yaml": "Casinha Frosted Light Lite",
+    "Frosted Glass Dark Lite.yaml": "Casinha Frosted Dark Lite",
+}
+
+
 def _theme_name(filename: str) -> str:
-    return filename.removesuffix(".yaml")
+    return THEME_NAMES[filename]
 
 
 def _render_single_mode(source: str, mode: str, filename: str) -> str:

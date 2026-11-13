@@ -1,18 +1,18 @@
-# Frosted Glass Dark Lite
+# Casinha Frosted Dark Lite
 # ver. 1.4.0 - (2026-10-01)
 
-Frosted Glass Dark Lite:
-  card-mod-theme: 'Frosted Glass Dark Lite'
-  uix-theme: 'Frosted Glass Dark Lite'
+Casinha Frosted Dark Lite:
+  card-mod-theme: 'Casinha Frosted Dark Lite'
+  uix-theme: 'Casinha Frosted Dark Lite'
 
   # =========================
   # HEADER (Top Bar)
   # =========================
   app-header-backdrop-filter: 'none'
   app-header-background-color: 'transparent'
-  app-header-text-color: 'rgba(240, 243, 255, 0.95)'
+  app-header-text-color: 'rgba(245, 245, 247, 0.95)'
   app-header-edit-background-color: 'var(--app-header-background-color)'
-  app-header-edit-text-color: 'rgba(234, 235, 238, 0.98)'
+  app-header-edit-text-color: 'rgba(245, 245, 247, 0.98)'
   app-theme-color: 'rgb(2, 6, 11)'                                                      # 1.2 Glass – header theme color hint for browsers
 
   # =========================
@@ -21,10 +21,10 @@ Frosted Glass Dark Lite:
   sidebar-background-color: 'transparent'
   sidebar-backdrop-filter: 'none'
   sidebar-border-color: 'rgba(255, 255, 255, 0.12)'
-  sidebar-icon-color: 'rgba(234, 235, 238, 0.6)'
-  sidebar-text-color: 'rgba(234, 235, 238, 0.8)'
-  sidebar-selected-icon-color: 'rgba(234, 235, 238, 0.95)'
-  sidebar-selected-text-color: 'rgba(234, 235, 238, 0.98)'
+  sidebar-icon-color: 'rgba(245, 245, 247, 0.6)'
+  sidebar-text-color: 'rgba(245, 245, 247, 0.8)'
+  sidebar-selected-icon-color: 'rgba(245, 245, 247, 0.95)'
+  sidebar-selected-text-color: 'rgba(245, 245, 247, 0.98)'
 
   # =========================
   # DIALOGS
@@ -38,16 +38,16 @@ Frosted Glass Dark Lite:
   # =========================
   # THIRD-PARTY CARD CONTRACTS
   # =========================
-  bubble-border-radius: '18px'
+  bubble-border-radius: '20px'
   bubble-main-background-color: 'transparent'
   bubble-secondary-background-color: 'rgba(255, 255, 255, 0.10)'
-  bubble-accent-color: 'rgb(122, 162, 190)'
+  bubble-accent-color: '#0A84FF'
   bubble-icon-border-radius: '14px'
   bubble-icon-background-color: 'rgba(255, 255, 255, 0.12)'
   bubble-sub-button-border-radius: '12px'
   bubble-sub-button-background-color: 'rgba(255, 255, 255, 0.11)'
   bubble-box-shadow: 'var(--ha-card-box-shadow)'
-  bubble-border: '0.5px solid rgba(255, 255, 255, 0.12)'
+  bubble-border: '0.5px solid rgba(255, 255, 255, 0.35)'
   bubble-pop-up-border-radius: '28px'
   bubble-pop-up-main-background-color: 'var(--frosted-glass-popup-surface)'
   bubble-pop-up-background-color: 'var(--frosted-glass-popup-surface)'
@@ -55,23 +55,23 @@ Frosted Glass Dark Lite:
   bubble-backdrop-filter: 'none'
   bubble-select-list-border-radius: '14px'
   bubble-select-list-background-color: 'var(--frosted-glass-menu-surface)'
-  bubble-select-list-item-accent-color: 'rgba(122, 162, 190, 0.24)'
-  bubble-horizontal-buttons-stack-border-radius: '18px'
+  bubble-select-list-item-accent-color: 'rgba(10, 132, 255, 0.24)'
+  bubble-horizontal-buttons-stack-border-radius: '20px'
   bubble-horizontal-buttons-stack-background-color: 'transparent'
   navbar-background-color: 'transparent'
-  navbar-primary-color: 'rgb(122, 162, 190)'
-  navbar-border-radius: '18px'
+  navbar-primary-color: '#0A84FF'
+  navbar-border-radius: '20px'
   navbar-box-shadow: 'var(--ha-card-box-shadow)'
   navbar-box-shadow-desktop: 'var(--ha-card-box-shadow)'
   navbar-box-shadow-mobile-floating: 'var(--ha-card-box-shadow)'
   navbar-backdrop-filter: 'none'
   simple-swipe-card-pagination-background: 'transparent'
-  simple-swipe-card-pagination-dot-inactive-color: 'rgba(234, 235, 238, 0.34)'
-  simple-swipe-card-pagination-dot-active-color: 'rgb(122, 162, 190)'
-  simple-swipe-card-pagination-dot-active-box-shadow: '0 0 12px rgba(122, 162, 190, 0.30)'
+  simple-swipe-card-pagination-dot-inactive-color: 'rgba(245, 245, 247, 0.34)'
+  simple-swipe-card-pagination-dot-active-color: '#0A84FF'
+  simple-swipe-card-pagination-dot-active-box-shadow: '0 0 12px rgba(10, 132, 255, 0.30)'
   btn-bg-color-off: 'rgba(255, 255, 255, 0.09)'
-  btn-bg-color-on: 'rgba(122, 162, 190, 0.22)'
-  slider-track-color: 'rgba(234, 235, 238, 0.16)'
+  btn-bg-color-on: 'rgba(10, 132, 255, 0.22)'
+  slider-track-color: 'rgba(245, 245, 247, 0.16)'
 
   # =========================
   # CARDS / CARD-MOD
@@ -83,6 +83,13 @@ Frosted Glass Dark Lite:
 
       position: relative;
       isolation: isolate;
+    }
+
+    /* Casinha: tile cards (~56px tall) are full pills. The glass layer
+       inherits this radius, so rim and blur follow the pill. */
+    :host(hui-tile-card) ha-card {
+      --ha-card-border-radius: 28px;
+      border-radius: 28px;
     }
 
     /* Low specificity lets per-card artwork override the glass layer. */
@@ -294,7 +301,7 @@ Frosted Glass Dark Lite:
       /* Glass system tokens (new, dark-tuned) */
 
       /* Tokens - match structure to Light theme for consistency */
-      --token-rgb-primary: 122, 162, 190;
+      --token-rgb-primary: 10, 132, 255;
       --token-rgb-black: 0, 0, 0;
       --token-rgb-white: 234, 235, 238;
       --token-rgb-purple: 129, 45, 250;
@@ -304,8 +311,8 @@ Frosted Glass Dark Lite:
       --token-rgb-indigo: 48, 63, 159;
       --token-rgb-blue: 33, 150, 243;
       --token-rgb-light-blue: 3, 169, 244;
-      --token-rgb-cyan: 122, 162, 190;
-      --token-rgb-teal: 122, 162, 190;
+      --token-rgb-cyan: 10, 132, 255;
+      --token-rgb-teal: 10, 132, 255;
       --token-rgb-green: 56, 142, 60;
       --token-rgb-light-green: 139, 195, 74;
       --token-rgb-lime: 205, 220, 57;
@@ -323,20 +330,20 @@ Frosted Glass Dark Lite:
       --token-color-primary-light: rgb(172 196 212);
       --token-color-accent: rgb(var(--token-rgb-teal));
       --token-color-disabled: rgb(148 165 178);
-      --token-color-feedback-info: rgb(122, 162, 190);
-      --token-color-feedback-warning: rgb(255, 219, 117);
-      --token-color-feedback-error: rgb(234, 114, 135);
-      --token-color-feedback-success: rgb(118, 214, 152);
-      --token-color-icon-primary: rgba(234, 235, 238, 0.95);
-      --token-color-icon-secondary: rgba(234, 235, 238, 0.75);
-      --token-color-icon-sidebar: rgba(234, 235, 238, 0.6);
+      --token-color-feedback-info: #0A84FF;
+      --token-color-feedback-warning: #FF9F0A;
+      --token-color-feedback-error: #FF453A;
+      --token-color-feedback-success: #30D158;
+      --token-color-icon-primary: rgba(245, 245, 247, 0.95);
+      --token-color-icon-secondary: rgba(245, 245, 247, 0.75);
+      --token-color-icon-sidebar: rgba(245, 245, 247, 0.6);
       --token-color-icon-sidebar-selected: var(--token-color-icon-primary);
-      --token-color-text-primary: rgba(234, 235, 238, 0.98);
-      --token-color-text-secondary: rgba(234, 235, 238, 0.8);
-      --token-color-text-disabled: rgba(234, 235, 238, 0.45);
+      --token-color-text-primary: rgba(245, 245, 247, 0.98);
+      --token-color-text-secondary: rgba(245, 245, 247, 0.8);
+      --token-color-text-disabled: rgba(245, 245, 247, 0.45);
       --token-color-text-sidebar-selected: var(--token-color-text-primary);
       --token-color-text-sidebar: var(--token-color-text-secondary);
-      --token-color-text-label-badge: rgba(234, 235, 238, 0.85);
+      --token-color-text-label-badge: rgba(245, 245, 247, 0.85);
       --token-color-text-chip: rgb(var(--token-rgb-white));
       --token-color-background-base: rgba(2, 6, 11, 0.8);
       --token-color-background-secondary: rgba(12, 20, 30, 0.7);
@@ -354,16 +361,16 @@ Frosted Glass Dark Lite:
       --token-color-background-label-badge-yellow: var(--token-color-feedback-warning);
       --token-color-background-label-badge-grey: rgb(83, 90, 103);
       --token-color-background-popup-scrim: rgba(0, 0, 0, 1);
-      --token-color-border-card: rgba(234, 235, 238, 0.22);
-      --token-color-switch-button-unchecked: rgba(234, 235, 238, 0.3);
-      --token-color-switch-track-unchecked: rgba(234, 235, 238, 0.18);
+      --token-color-border-card: rgba(245, 245, 247, 0.22);
+      --token-color-switch-button-unchecked: rgba(245, 245, 247, 0.3);
+      --token-color-switch-track-unchecked: rgba(245, 245, 247, 0.18);
       --token-color-codemirror-string: rgb(164, 209, 255);
       --token-color-codemirror-keyword: rgb(148, 182, 255);
       --token-color-codemirror-number: rgb(255, 171, 64);
       --token-shadow-card-medium: 0 14px 38px rgba(0, 0, 0, 0.34), 0 2px 10px rgba(0, 0, 0, 0.24);
       --token-size-radius-small: 10px;
       --token-size-radius-medium: 14px;
-      --token-size-radius-large: 18px;
+      --token-size-radius-large: 20px;
       --token-size-radius-card: var(--token-size-radius-large);
       --token-size-width-border-card: 0.5px;
       --token-size-height-slider: 5px;
@@ -383,7 +390,7 @@ Frosted Glass Dark Lite:
       --token-color-black: rgb(0, 0, 0);
       --token-color-white: rgb(234, 235, 238);
       --token-opacity-ripple-hover: 0.1;
-      --token-font-family-primary: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      --token-font-family-primary: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       --token-weight-font-title-card: 500;
 
       /* Additional color variables. */
@@ -411,22 +418,22 @@ Frosted Glass Dark Lite:
   # =========================
   # TYPOGRAPHY
   # =========================
-  ha-font-family-body: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  ha-font-family-heading: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  ha-font-family-body: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  ha-font-family-heading: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   ha-font-family-code: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace'
-  ha-font-family-longform: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  ha-card-header-font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  mdc-typography-font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  mdc-typography-button-font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  mdc-typography-body1-font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  md-list-item-label-text-font: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  paper-font-common-base_-_font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  ha-font-family-longform: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  ha-card-header-font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  mdc-typography-font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  mdc-typography-button-font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  mdc-typography-body1-font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  md-list-item-label-text-font: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  paper-font-common-base_-_font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   paper-font-common-code_-_font-family: 'var(--ha-font-family-code)'
-  paper-font-body1_-_font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  paper-font-subhead_-_font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  paper-font-headline_-_font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  paper-font-caption_-_font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  paper-font-title_-_font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  paper-font-body1_-_font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  paper-font-subhead_-_font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  paper-font-headline_-_font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  paper-font-caption_-_font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  paper-font-title_-_font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
 
   ha-font-weight-normal: '400'
   ha-font-weight-medium: '500'
@@ -437,7 +444,7 @@ Frosted Glass Dark Lite:
   mdc-typography-button-font-weight: '500'
   title-font-weight: '500'
 
-  ha-font-size-xs: '10px'
+  ha-font-size-xs: '11px'
   ha-font-size-s: '12px'
   ha-font-size-m: '14px'
   ha-font-size-l: '15px'
@@ -447,76 +454,76 @@ Frosted Glass Dark Lite:
   ha-font-size-4xl: '33px'
   ha-font-size-5xl: '42px'
   title-font-size: '20px'
-  ha-heading-card-title-font-size: 'var(--ha-font-size-l)'
-  ha-heading-card-title-font-weight: '500'
+  ha-heading-card-title-font-size: '17px'
+  ha-heading-card-title-font-weight: '600'
   ha-font-smoothing: 'antialiased'
 
   # =========================
   # COLORS & MISCELLANEOUS
   # =========================
   # 1.2.1 - change add HA 2025.8 primary color scale aligned to theme
-  ha-color-primary-05: '#0A1115'
-  ha-color-primary-10: '#14212A'
-  ha-color-primary-20: '#294254'
-  ha-color-primary-30: '#3D637E'
-  ha-color-primary-40: '#5284A8'
-  ha-color-primary-50: '#7AA2BE'   # base theme primary (kept)
-  ha-color-primary-60: '#95B5CB'
-  ha-color-primary-70: '#AFC7D8'
-  ha-color-primary-80: '#CADAE5'
-  ha-color-primary-90: '#E4ECF2'
-  ha-color-primary-95: '#F2F6F8'
+  ha-color-primary-05: '#000D1A'
+  ha-color-primary-10: '#001933'
+  ha-color-primary-20: '#003366'
+  ha-color-primary-30: '#004C99'
+  ha-color-primary-40: '#0066CC'
+  ha-color-primary-50: '#0A84FF'
+  ha-color-primary-60: '#3399FF'
+  ha-color-primary-70: '#66B2FF'
+  ha-color-primary-80: '#99CCFF'
+  ha-color-primary-90: '#CCE5FF'
+  ha-color-primary-95: '#E5F2FF'
 
   # 1.2.1 - change add aliases for compatibility (some threads reference --color-primary-xx)
-  color-primary-05: '#0A1115'
-  color-primary-10: '#14212A'
-  color-primary-20: '#294254'
-  color-primary-30: '#3D637E'
-  color-primary-40: '#5284A8'
-  color-primary-50: '#7AA2BE'
-  color-primary-60: '#95B5CB'
-  color-primary-70: '#AFC7D8'
-  color-primary-80: '#CADAE5'
-  color-primary-90: '#E4ECF2'
-  color-primary-95: '#F2F6F8'
-  primary-text-color: 'rgba(234, 235, 238, 0.98)'
-  secondary-text-color: 'rgba(234, 235, 238, 0.8)'
-  text-primary-color: 'rgba(234, 235, 238, 0.98)'
-  disabled-text-color: 'rgba(234, 235, 238, 0.45)'
+  color-primary-05: '#000D1A'
+  color-primary-10: '#001933'
+  color-primary-20: '#003366'
+  color-primary-30: '#004C99'
+  color-primary-40: '#0066CC'
+  color-primary-50: '#0A84FF'
+  color-primary-60: '#3399FF'
+  color-primary-70: '#66B2FF'
+  color-primary-80: '#99CCFF'
+  color-primary-90: '#CCE5FF'
+  color-primary-95: '#E5F2FF'
+  primary-text-color: '#F5F5F7'
+  secondary-text-color: '#98989D'
+  text-primary-color: 'rgba(245, 245, 247, 0.98)'
+  disabled-text-color: '#636366'
   text-light-primary-color: 'rgb(234, 235, 238)'
-  paper-item-icon-color: 'rgba(234, 235, 238, 0.95)'
-  state-inactive-color: 'rgba(234, 235, 238, 0.8)'
-  state-icon-color: 'rgba(234, 235, 238, 0.95)'
-  state-on-color: 'rgb(118, 214, 152)'
-  state-off-color: 'rgb(234, 114, 135)'
-  label-badge-text-color: 'rgba(234, 235, 238, 0.85)'
+  paper-item-icon-color: 'rgba(245, 245, 247, 0.95)'
+  state-inactive-color: 'rgba(245, 245, 247, 0.8)'
+  state-icon-color: 'rgba(245, 245, 247, 0.95)'
+  state-on-color: '#30D158'
+  state-off-color: '#FF453A'
+  label-badge-text-color: 'rgba(245, 245, 247, 0.85)'
   label-badge-red: 'rgb(234, 114, 135)'
-  label-badge-blue: 'rgb(122, 162, 190)'
+  label-badge-blue: '#0A84FF'
   label-badge-green: 'rgb(78, 183, 128)'
   label-badge-yellow: 'rgb(255, 219, 117)'
   label-badge-grey: 'rgb(83, 90, 103)'
   ha-chip-text-color: 'rgb(234, 235, 238)'
 
-  primary-color: 'rgb(122, 162, 190)'
-  dark-primary-color: 'rgb(122, 162, 190)'
+  primary-color: '#0A84FF'
+  dark-primary-color: '#0A84FF'
   light-primary-color: 'rgb(172, 196, 212)'
-  accent-color: 'rgb(122, 162, 190)'
+  accent-color: '#0A84FF'
   divider-color: 'rgba(90, 111, 128, 0.28)'
   scrollbar-thumb-color: 'rgb(53, 70, 84)'
   disabled-color: 'rgb(148, 165, 178)'
-  info-color: 'rgb(122, 162, 190)'
-  success-color: 'rgb(118, 214, 152)'
-  warning-color: 'rgb(255, 219, 117)'
-  error-color: 'rgb(234, 114, 135)'
-  background-image: "center / cover no-repeat fixed url('https://cdn.jsdelivr.net/gh/wessamlauf/homeassistant-frosted-glass-themes@refs/heads/main/themes/frosted-glass-dark-background.jpg')"
+  info-color: '#0A84FF'
+  success-color: '#30D158'
+  warning-color: '#FF9F0A'
+  error-color: '#FF453A'
+  background-image: "center / cover no-repeat fixed url('https://cdn.jsdelivr.net/gh/diniscorreia/casinha-frosted@main/themes/frosted-glass-dark-background.jpg')"
   lovelace-background: 'var(--background-image)'
   primary-background-color: 'rgb(2, 6, 11)'
   secondary-background-color: 'rgba(2, 6, 11, 0.5)'
   clear-background-color: 'rgba(2, 6, 11, 0.7)'
   card-background-color: 'var(--frosted-glass-menu-surface)'
   ha-card-background: 'transparent'
-  ha-card-border-radius: '18px'
-  ha-card-border-color: 'rgba(234, 235, 238, 0.22)'
+  ha-card-border-radius: '20px'
+  ha-card-border-color: 'rgba(245, 245, 247, 0.22)'
   ha-card-border-width: '0.5px'
   ha-card-border-style: 'solid'
   ha-card-border: 'var(--ha-card-border-width) solid var(--ha-card-border-color)'
@@ -558,49 +565,49 @@ Frosted Glass Dark Lite:
   ha-switch-size: '24px'
   ha-switch-thumb-size: '18px'
   ha-switch-width: '48px'
-  ha-switch-background-color: 'rgba(234, 235, 238, 0.14)'
-  ha-switch-background-color-hover: 'rgba(234, 235, 238, 0.22)'
-  ha-switch-thumb-background-color: 'rgba(234, 235, 238, 0.70)'
-  ha-switch-thumb-background-color-hover: 'rgba(234, 235, 238, 0.82)'
-  ha-switch-checked-background-color: 'rgba(122, 162, 190, 0.34)'
-  ha-switch-checked-background-color-hover: 'rgba(122, 162, 190, 0.46)'
-  ha-switch-checked-thumb-background-color: 'rgb(122, 162, 190)'
-  ha-switch-checked-thumb-background-color-hover: 'rgb(122, 162, 190)'
+  ha-switch-background-color: 'rgba(245, 245, 247, 0.14)'
+  ha-switch-background-color-hover: 'rgba(245, 245, 247, 0.22)'
+  ha-switch-thumb-background-color: 'rgba(245, 245, 247, 0.70)'
+  ha-switch-thumb-background-color-hover: 'rgba(245, 245, 247, 0.82)'
+  ha-switch-checked-background-color: 'rgba(10, 132, 255, 0.34)'
+  ha-switch-checked-background-color-hover: 'rgba(10, 132, 255, 0.46)'
+  ha-switch-checked-thumb-background-color: '#0A84FF'
+  ha-switch-checked-thumb-background-color-hover: '#0A84FF'
   control-switch-border-radius: '9999px'
-  control-button-icon-color: 'rgba(234, 235, 238, 0.95)'
-  control-button-background-color: 'rgb(122, 162, 190)'
+  control-button-icon-color: 'rgba(245, 245, 247, 0.95)'
+  control-button-background-color: '#0A84FF'
   control-button-background-opacity: '0.28'
 
   # Sliders, toggles, switches
-  paper-slider-knob-color: 'rgb(122, 162, 190)'
-  paper-slider-knob-start-color: 'rgb(122, 162, 190)'
-  paper-slider-pin-color: 'rgb(122, 162, 190)'
-  paper-slider-active-color: 'rgb(122, 162, 190)'
+  paper-slider-knob-color: '#0A84FF'
+  paper-slider-knob-start-color: '#0A84FF'
+  paper-slider-pin-color: '#0A84FF'
+  paper-slider-active-color: '#0A84FF'
   paper-slider-secondary-color: 'rgb(172, 196, 212)'
-  switch-checked-button-color: 'rgb(122, 162, 190)'
-  switch-checked-track-color: 'rgb(122, 162, 190)'
-  switch-unchecked-button-color: 'rgba(234, 235, 238, 0.3)'
-  switch-unchecked-track-color: 'rgba(234, 235, 238, 0.18)'
-  paper-toggle-button-checked-button-color: 'rgb(122, 162, 190)'
-  paper-toggle-button-checked-bar-color: 'rgb(122, 162, 190)'
-  paper-toggle-button-unchecked-button-color: 'rgba(234, 235, 238, 0.3)'
-  paper-toggle-button-unchecked-bar-color: 'rgba(234, 235, 238, 0.18)'
-  mdc-checkbox-unchecked-color: 'rgba(234, 235, 238, 0.75)'
-  mdc-radio-unchecked-color: 'rgba(234, 235, 238, 0.75)'
+  switch-checked-button-color: '#0A84FF'
+  switch-checked-track-color: '#0A84FF'
+  switch-unchecked-button-color: 'rgba(245, 245, 247, 0.3)'
+  switch-unchecked-track-color: 'rgba(245, 245, 247, 0.18)'
+  paper-toggle-button-checked-button-color: '#0A84FF'
+  paper-toggle-button-checked-bar-color: '#0A84FF'
+  paper-toggle-button-unchecked-button-color: 'rgba(245, 245, 247, 0.3)'
+  paper-toggle-button-unchecked-bar-color: 'rgba(245, 245, 247, 0.18)'
+  mdc-checkbox-unchecked-color: 'rgba(245, 245, 247, 0.75)'
+  mdc-radio-unchecked-color: 'rgba(245, 245, 247, 0.75)'
   mdc-ripple-hover-opacity: '0.1'
 
   # Inputs
   input-background-color: 'rgba(12, 20, 30, 0.1)'
   input-background-token-color-disabled: 'rgba(12, 20, 30, 0.1)'
   input-fill-color: 'rgba(50,50, 50, 0.1)'
-  input-ink-color: 'rgba(234, 235, 238, 0.98)'
-  input-label-ink-color: 'rgba(234, 235, 238, 0.98)'
+  input-ink-color: 'rgba(245, 245, 247, 0.98)'
+  input-label-ink-color: 'rgba(245, 245, 247, 0.98)'
   input-disabled-fill-color: 'rgba(12, 20, 30, 0.5)'
-  input-disabled-ink-color: 'rgba(234, 235, 238, 0.45)'
-  input-disabled-label-ink-color: 'rgba(234, 235, 238, 0.45)'
+  input-disabled-ink-color: 'rgba(245, 245, 247, 0.45)'
+  input-disabled-label-ink-color: 'rgba(245, 245, 247, 0.45)'
   input-idle-line-color: 'transparent'
-  input-dropdown-icon-color: 'rgba(234, 235, 238, 0.8)'
-  input-hover-line-color: 'rgb(122, 162, 190)'
+  input-dropdown-icon-color: 'rgba(245, 245, 247, 0.8)'
+  input-hover-line-color: '#0A84FF'
   mdc-select-idle-line-color: 'transparent'
   mdc-text-field-idle-line-color: 'transparent'
   mdc-theme-surface: 'var(--frosted-glass-menu-surface)'
@@ -609,9 +616,9 @@ Frosted Glass Dark Lite:
 
   # Code Editor & Misc
   code-editor-background-color: 'rgb(2, 6, 11)'
-  codemirror-meta: 'rgba(234, 235, 238, 0.98)'
-  codemirror-property: 'rgb(122, 162, 190)'
-  codemirror-atom: 'rgb(122, 162, 190)'
+  codemirror-meta: 'rgba(245, 245, 247, 0.98)'
+  codemirror-property: '#0A84FF'
+  codemirror-atom: '#0A84FF'
   codemirror-string: 'rgb(164, 209, 255)'
   codemirror-keyword: 'rgb(148, 182, 255)'
   codemirror-number: 'rgb(255, 171, 64)'
@@ -623,10 +630,28 @@ Frosted Glass Dark Lite:
 
   # Misc sizes
   paper-slider-height: '5px'
-  border-radius: '18px'
+  border-radius: '20px'
 
 
   # --- End of Theme ---
+  state-light-active-color: '#FFD60A'
+  state-switch-active-color: '#FFD60A'
+  state-fan-active-color: '#40C8E0'
+  state-climate-cool-color: '#0A84FF'
+  state-climate-heat-color: '#FF9F0A'
+  state-climate-heat_cool-color: '#BF5AF2'
+  state-climate-dry-color: '#40C8E0'
+  state-climate-fan_only-color: '#40C8E0'
+  state-cover-active-color: '#5E5CE6'
+  state-media_player-active-color: '#BF5AF2'
+  state-scene-active-color: '#FF9F0A'
+  primary-font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  ha-tile-info-primary-font-size: '15px'
+  ha-tile-info-primary-font-weight: '600'
+  ha-tile-info-primary-letter-spacing: '-0.2px'
+  ha-tile-info-secondary-font-size: '13px'
+  ha-tile-info-secondary-letter-spacing: '-0.1px'
+  ha-badge-font-size: '13px'
 
   # A non-empty single-mode map is required by Home Assistant 2026.8+.
   # Variables stay at the top level so card-mod and UIX can use this theme as an engine.

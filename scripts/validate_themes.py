@@ -201,6 +201,39 @@ def _validate_theme_values(path: Path, name: str, values: dict) -> list[str]:
     return errors
 
 
+def _last_alpha(value: object) -> float | None:
+    """Return the alpha of the last rgba() colour in a value (None if unparsed)."""
+    if not isinstance(value, str):
+        return None
+    matches = re.findall(r"rgba\([^)]*,\s*([0-9.]+)\s*\)", value)
+    return float(matches[-1]) if matches else None
+
+
+def _validate_glass_rim(path: Path, name: str, section: dict) -> list[str]:
+    errors = []
+    rim = _last_alpha(section.get("bubble-border"))
+    fills = (
+        "bubble-secondary-background-color",
+        "bubble-icon-background-color",
+        "bubble-sub-button-background-color",
+    )
+    if rim is None:
+        errors.append(f"{path.name}: {name} bubble-border must be an rgba() rim")
+    else:
+        for key in fills:
+            fill = _last_alpha(section.get(key)) or 0.0
+            if rim < 2 * fill:
+                errors.append(
+                    f"{path.name}: {name} glass rule: rim alpha {rim} must be at "
+                    f"least 2x the {key} alpha {fill}"
+                )
+    card_rim = _last_alpha(section.get("ha-card-border-color"))
+    card_fill = _last_alpha(section.get("ha-card-glass-tint")) or 0.0
+    if card_rim is None or card_rim <= 0 or card_rim < 2 * card_fill:
+        errors.append(f"{path.name}: {name} glass rule: card rim must exceed card fill")
+    return errors
+
+
 def _validate_compatibility(path: Path, name: str, values: dict) -> list[str]:
     """Validate contracts that prevent visual regressions in HA and HACS cards."""
 
@@ -259,6 +292,10 @@ def _validate_compatibility(path: Path, name: str, values: dict) -> list[str]:
         ):
             if section.get(key) != "transparent":
                 errors.append(f"{path.name}: {name} {key} must remain transparent")
+
+        # Casinha glass rule: a rim must always be much more opaque than the
+        # fill it surrounds, or the glass look disappears.
+        errors.extend(_validate_glass_rim(path, name, section))
 
         if re.search(r"input\s*,\s*ha-textfield\s*,\s*ha-select", root_css):
             errors.append(

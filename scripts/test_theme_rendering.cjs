@@ -352,7 +352,7 @@ async function run() {
       const reduced = await page.evaluate(() => Object.values(window.frostedQa).map(el => getComputedStyle(el).animationName));
       assert.deepEqual(reduced, ['none','none','none'], `${section.name}: reduced motion`);
       checks += reduced.length;
-      if (process.env.FROSTED_GLASS_SCREENSHOTS && section.name === 'Frosted Glass') {
+      if (process.env.FROSTED_GLASS_SCREENSHOTS && section.name === 'Casinha Frosted') {
         await page.screenshot({ path:path.join(process.env.FROSTED_GLASS_SCREENSHOTS, `${section.mode}.png`), fullPage:true });
       }
       await page.close();
