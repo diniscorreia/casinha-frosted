@@ -38,7 +38,7 @@ This is not in the default HACS store. In HACS open the three-dot menu, choose *
 
 [![Open your Home Assistant instance and add this repository](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=diniscorreia&repository=casinha-frosted&category=theme)
 
-**Step 3: Reload themes (Developer tools → Actions → frontend.reload_themes) or restart Home Assistant**
+**Step 3: Reload themes (Settings → Tools → Actions → `frontend.reload_themes`) or restart Home Assistant**
 
 **Step 4: Activate Theme**
 - Go to your profile (bottom-left corner of Home Assistant UI), and select **Casinha Frosted** or **Casinha Frosted Lite** (the Light, Dark, Light Lite and Dark Lite variants are also listed separately) from the theme dropdown.
