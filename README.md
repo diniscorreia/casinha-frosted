@@ -1,27 +1,16 @@
-# Frosted Glass Theme for Home Assistant ✨
-[![HACS Badge](https://img.shields.io/badge/Available%20in-HACS-41BDF5?logo=home-assistant&logoColor=white)](https://my.home-assistant.io/redirect/hacs_repository/?owner=WessamLauf&repository=homeassistant-frosted-glass-themes&category=theme)
-[![Latest Release](https://img.shields.io/github/v/release/wessamlauf/homeassistant-frosted-glass-themes?label=Release&logo=github)](https://github.com/wessamlauf/homeassistant-frosted-glass-themes/releases)
-[![Last Commit](https://img.shields.io/github/last-commit/wessamlauf/homeassistant-frosted-glass-themes?label=Last%20commit)](https://github.com/wessamlauf/homeassistant-frosted-glass-themes/commits/main)
-[![GitHub Stars](https://img.shields.io/github/stars/wessamlauf/homeassistant-frosted-glass-themes?style=social)](https://github.com/wessamlauf/homeassistant-frosted-glass-themes/stargazers)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-☕-orange?logo=buymeacoffee&logoColor=white)](https://www.buymeacoffee.com/wessamlauf)
+# Casinha Frosted ✨
+[![HACS Badge](https://img.shields.io/badge/HACS-Custom%20repository-41BDF5?logo=home-assistant&logoColor=white)](https://my.home-assistant.io/redirect/hacs_repository/?owner=diniscorreia&repository=casinha-frosted&category=theme)
+[![Last Commit](https://img.shields.io/github/last-commit/diniscorreia/casinha-frosted?label=Last%20commit)](https://github.com/diniscorreia/casinha-frosted/commits/main)
 
+**Casinha Frosted** is an Apple-style frosted glass theme for Home Assistant: system font, iOS text sizes, Apple system colours, Home-app "on" colours and pill-shaped tiles, on top of transparent blurred glass cards.
 
-<img alt="Frosted Glass logo" src="https://github.com/user-attachments/assets/f1fd71d5-f5bb-451e-862c-cc668d987f66" />
+It is a fork of **[Frosted Glass](https://github.com/wessamlauf/homeassistant-frosted-glass-themes) by [wessamlauf](https://github.com/wessamlauf)** (MIT). All the glass, blur, sidebar, dialog and third-party-card engineering is theirs; this fork changes the names, font, colours and shapes. Please support the original author.
 
-### Apple made it liquid. I made it frosted. 😎
-
-**Frosted Glass** is a **Liquid Glass theme for Home Assistant**, built around transparent cards, soft blur, subtle reflections, and a little more depth for your dashboard.
-
-Choose **Light or Dark**, or go **Lite** for the same glassmorphism style without blur. With native **Bubble Card** and **Navbar Card** support, matching dialogs, and easy installation through **HACS**, the glass look follows you across Home Assistant.
-
-### Bring depth and elegance to your dashboard with blurred glass panels and soft UI touches. ☀️
-
-
-This theme brings a sophisticated "**Frosted Glass**" aesthetic to your dashboard, combining transparency with elegant blurring effects to create a truly unique and contemporary look. Designed for both visual appeal and comfortable usability, the Frosted Glass Theme transforms your Home Assistant interface into a work of art. 🖼️
-
+Choose **Light or Dark**, or go **Lite** for the same style without blur.
 
 ## ✨ Features
 
+- **Apple look**: system font stack (`-apple-system`, SF on Apple devices), iOS text sizes, Apple system colours, Home-app on-colours and pill tiles. 🍎
 - **Frosted Glass Aesthetic**: Transparent and blurred card elements create depth and layering. ❄️
 - **Light & Dark Modes**: Choose between a bright, clean look or a soft dark interface. ☀️🌑
 - **Modern Design**: Rounded corners, minimal shadows, and cohesive color palettes. 🛋️
@@ -30,7 +19,6 @@ This theme brings a sophisticated "**Frosted Glass**" aesthetic to your dashboar
 - **Home Assistant 2026.8 Ready**: Uses the current form, switch and border-radius theme tokens, with validated single-mode declarations.
 - **Two Styling Engines**: Works with UIX and remains compatible with card-mod.
 - **Native Custom-Card Profiles**: Bubble Card, Navbar Card, stack-in-card, Mushroom, Simple Swipe Card and other common HACS cards inherit deliberate theme contracts instead of generic overrides.
-- **Want to Customize? (New!)**: Install Frosted Glass Theme Manager to choose your own color&background! 🎨
 
 ## 🚀 Quick Installation Guide
 
@@ -42,16 +30,18 @@ This theme brings a sophisticated "**Frosted Glass**" aesthetic to your dashboar
 
 Do not install both engines at the same time. They can both try to patch the same Home Assistant elements.
 
-For sidebar and drawer styling on Settings and other panels, load the selected engine as a **frontend module** using its installation instructions. A dashboard resource alone is loaded only on Lovelace dashboards. Select Frosted Glass in your **profile** to apply it to the whole interface; a per-view theme only affects that view.
+For sidebar and drawer styling on Settings and other panels, load the selected engine as a **frontend module** using its installation instructions. A dashboard resource alone is loaded only on Lovelace dashboards. Select Casinha Frosted in your **profile** to apply it to the whole interface; a per-view theme only affects that view.
 
 **Step 2: Install Theme via HACS**
 
-[![Open your Home Assistant instance and install via HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=WessamLauf&repository=homeassistant-frosted-glass-themes&category=theme)
+This is not in the default HACS store. In HACS open the three-dot menu, choose **Custom repositories**, add `https://github.com/diniscorreia/casinha-frosted` with category **Theme**, then download **Casinha Frosted**.
+
+[![Open your Home Assistant instance and add this repository](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=diniscorreia&repository=casinha-frosted&category=theme)
 
 **Step 3: Restart Home Assistant**
 
 **Step 4: Activate Theme**
-- Go to your profile (bottom-left corner of Home Assistant UI), and select **Frosted Glass** or **Frosted Glass Lite** from the theme dropdown.
+- Go to your profile (bottom-left corner of Home Assistant UI), and select **Casinha Frosted** or **Casinha Frosted Lite** (the Light, Dark, Light Lite and Dark Lite variants are also listed separately) from the theme dropdown.
 
 -----
 
@@ -88,7 +78,7 @@ card_mod:
 
 ## 🧩 Third-party card compatibility
 
-The theme uses each card's public CSS variables where they exist. This keeps the integration stable across card updates and also lets custom colors generated by Frosted Glass Theme Manager flow into the card.
+The theme uses each card's public CSS variables where they exist. This keeps the integration stable across card updates and also lets custom colors generated by the upstream Frosted Glass Theme Manager flow into the card.
 
 | Card / integration | Theme behavior |
 | --- | --- |
@@ -113,51 +103,12 @@ Full modern dialogs use Home Assistant's native surface variables directly, incl
 
 Settings, sidebar and topbar share the warm light palette (`254, 244, 242`) or the nearly black blue dark base (`2, 6, 11`, `#02060B`). Dark controls, menus, editor surfaces and tonal accents use the matching cool blue/slate palette.
 
-See [the source audit and regression checks](docs/compatibility-audit.md) for the reviewed versions, styling contracts and test scope.
-
 -----
-
-## 🎨 Want to Customize? (New!)
-
-**Want to use your own Primary Color or Background Image without editing code?**
-
-Check out the official **[Frosted Glass Theme Manager](https://github.com/wessamlauf/frosted-glass-manager)** integration! 🛠️
-
-It allows you to:
-* 🌈 **Pick any color** via a UI Color Picker (it automatically calculates the correct contrast/shades).
-* 🖼️ **Set custom backgrounds** by simply pasting a URL.
-* ⚡ **Generate both** Standard and Lite versions of your custom theme instantly.
-
-![Untitled design (1)](https://github.com/user-attachments/assets/c5b9dd7b-290e-4769-9b8d-97d1d87046c6)
-
----
-
-## 🖼️ **Screenshots**
-
-### ☀️ Light Mode:
-<img alt="Snímka obrazovky 2025-08-22 182634" src="https://github.com/user-attachments/assets/6adca904-9a3d-4df6-b080-1480fce3fa35" />
-<img alt="Snímka obrazovky 2025-08-22 182706" src="https://github.com/user-attachments/assets/f0000f43-8afe-48c8-97f4-cfe52a6b6e42" />
-<img alt="Snímka obrazovky 2025-08-22 182719" src="https://github.com/user-attachments/assets/78e30168-16ae-4ac6-82d2-ef50c1262756" />
-<img alt="Snímka obrazovky 2025-08-22 182906" src="https://github.com/user-attachments/assets/b9782161-d9e8-47d8-b027-4bcf2a765135" />
-
-
-### 🌑 Dark Mode:
-<img alt="Snímka obrazovky 2025-08-22 182734" src="https://github.com/user-attachments/assets/8fadd748-c3a9-4578-994d-838f2b6a1329" />
-<img alt="Snímka obrazovky 2025-08-22 182756" src="https://github.com/user-attachments/assets/c0b2e265-5d5b-4d4b-bb6c-37fa7223c6bd" />
-<img alt="Snímka obrazovky 2025-08-22 182809" src="https://github.com/user-attachments/assets/da57d161-aeca-4266-95a5-b772c6c58007" />
-<img alt="Snímka obrazovky 2025-08-22 182852" src="https://github.com/user-attachments/assets/a8c5f368-568f-46c3-b705-fdc71d27cef1" />
-
-
-## ❤️ Support the Project
-- If you enjoy this theme and want to support future updates, consider buying me a coffee:
-<a href="https://www.buymeacoffee.com/wessamlauf" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
----
 
 ## 🐞 Issues / Feedback
 
 Have a problem or a suggestion?
-Open an [issue](https://github.com/wessamlauf/homeassistant-frosted-glass-themes/issues) or start a discussion on GitHub.
+Open an [issue](https://github.com/diniscorreia/casinha-frosted/issues) or start a discussion on GitHub.
 
 ---
 
@@ -169,7 +120,7 @@ Simple Swipe Card uses `clip-path` for slide clipping by default, while CSS `bac
 
 ### 2. **Closed custom-card internals**
 
-Cards that expose neither standard Home Assistant tokens nor public CSS variables cannot be fully restyled by a theme without card-specific support from their author. Frosted Glass avoids brittle deep overrides for those cards.
+Cards that expose neither standard Home Assistant tokens nor public CSS variables cannot be fully restyled by a theme without card-specific support from their author. Casinha Frosted avoids brittle deep overrides for those cards.
 
 ### 3. **Performance on Low-End Devices**
 The heavy use of `backdrop-filter: blur()` may cause noticeable lag on low-end hardware (older tablets, Pi-based dashboards, etc.).
@@ -177,6 +128,6 @@ The heavy use of `backdrop-filter: blur()` may cause noticeable lag on low-end h
 
 ---
 
-## ✨ Star History
+## 🙏 Credits & licence
 
-[![Star History Chart](https://api.star-history.com/svg?repos=wessamlauf/homeassistant-frosted-glass-themes&type=Date)](https://www.star-history.com/#wessamlauf/homeassistant-frosted-glass-themes&Date)
+Casinha Frosted is based on [Frosted Glass](https://github.com/wessamlauf/homeassistant-frosted-glass-themes) by [wessamlauf](https://github.com/wessamlauf), released under the MIT licence. The original licence and copyright notice are kept in [LICENSE](LICENSE). Issues with the glass engine itself may be better reported upstream.

@@ -1,0 +1,110 @@
+# Casinha Glass — system font, iOS "Liquid Glass"-style cards, Apple system colours.
+# Install: save as /config/themes/casinha_glass.yaml, then reload themes.
+Casinha Glass:
+  # --- Typography: each device's own system font ---
+  ha-font-family-body: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  ha-font-family-heading: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  primary-font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  paper-font-common-base_-_font-family: '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+
+  ha-badge-size: 40px
+  ha-badge-icon-size: 20px
+  ha-badge-font-size: 13px
+  ha-font-size-xs: 11px
+
+  ha-card-backdrop-filter: blur(24px) saturate(150%)
+  app-header-backdrop-filter: blur(20px) saturate(180%)
+
+  # --- Shape ---
+  ha-card-border-radius: 18px
+  ha-tile-info-primary-font-size: 15px
+  ha-tile-info-primary-font-weight: 600
+  ha-tile-info-primary-letter-spacing: -0.2px
+  ha-tile-info-secondary-font-size: 13px
+  ha-tile-info-secondary-letter-spacing: -0.1px
+  ha-tile-info-secondary-color: var(--secondary-text-color)
+  ha-heading-card-title-font-size: 17px
+  ha-heading-card-title-font-weight: 600
+  ha-section-grid-row-gap: 10px
+  ha-section-grid-column-gap: 10px
+  ha-view-sections-narrow-column-gap: 16px
+  ha-dialog-border-radius: 28px
+
+  modes:
+    light:
+      # Background + glass cards
+      lovelace-background: 'linear-gradient(165deg, #e4e8ee 0%, #eeeae3 55%, #e3e9e7 100%) fixed'
+
+      app-header-background-color: "rgba(238, 234, 227, 0.6)"
+      bar-box-shadow: "0 1px 0 rgba(0, 0, 0, 0.06)"
+
+      ha-card-background: "rgba(255, 255, 255, 0.5)"
+      ha-card-border-width: 1px
+      ha-card-box-shadow: "0 0 0 0.5px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.07)"
+      ha-card-border-color: "rgba(255, 255, 255, 0.9)"
+
+      # Apple label colours
+      primary-text-color: '#1D1D1F'
+      secondary-text-color: '#6E6E73'
+      disabled-text-color: '#AEAEB2'
+      divider-color: 'rgba(60, 60, 67, 0.12)'
+
+      # Apple system colours (light)
+      primary-color: '#007AFF'
+      accent-color: '#007AFF'
+      success-color: '#34C759'
+      warning-color: '#FF9500'
+      error-color: '#FF3B30'
+      info-color: '#007AFF'
+
+      # Home app-style "on" colours
+      state-light-active-color: '#FFCC00'
+      state-switch-active-color: '#FFCC00'
+      state-fan-active-color: '#30B0C7'
+      state-climate-cool-color: '#007AFF'
+      state-climate-heat-color: '#FF9500'
+      state-climate-heat_cool-color: '#AF52DE'
+      state-climate-dry-color: '#30B0C7'
+      state-climate-fan_only-color: '#30B0C7'
+      state-cover-active-color: '#5856D6'
+      state-media_player-active-color: '#AF52DE'
+      state-scene-active-color: '#FF9500'
+
+    dark:
+      lovelace-background: 'linear-gradient(165deg, #14161b 0%, #1b1d24 55%, #15181c 100%) fixed'
+
+      app-header-background-color: "rgba(20, 22, 27, 0.55)"
+      bar-box-shadow: "0 1px 0 rgba(255, 255, 255, 0.08)"
+
+      ha-card-border-width: 1px
+      ha-card-border-color: "rgba(255, 255, 255, 0.14)"
+      ha-card-background: "rgba(255, 255, 255, 0.09)"
+      ha-card-box-shadow: "inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 2px 8px rgba(0, 0, 0, 0.3)"
+
+      primary-text-color: '#F5F5F7'
+      secondary-text-color: '#98989D'
+      disabled-text-color: '#636366'
+      divider-color: 'rgba(84, 84, 88, 0.45)'
+
+      # Apple system colours (dark variants)
+      primary-color: '#0A84FF'
+      accent-color: '#0A84FF'
+      success-color: '#30D158'
+      warning-color: '#FF9F0A'
+      error-color: '#FF453A'
+      info-color: '#0A84FF'
+
+      state-light-active-color: '#FFD60A'
+      state-switch-active-color: '#FFD60A'
+      state-fan-active-color: '#40C8E0'
+      state-climate-cool-color: '#0A84FF'
+      state-climate-heat-color: '#FF9F0A'
+      state-climate-heat_cool-color: '#BF5AF2'
+      state-climate-dry-color: '#40C8E0'
+      state-climate-fan_only-color: '#40C8E0'
+      state-cover-active-color: '#5E5CE6'
+      state-media_player-active-color: '#BF5AF2'
+      state-scene-active-color: '#FF9F0A'
+
+  # card-background-color is deliberately left alone so dialogs and
+  # more-info popups stay opaque and readable.
